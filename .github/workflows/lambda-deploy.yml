@@ -37,13 +37,13 @@ jobs:
       - name: Deploy to Lambda
         run: |
           aws lambda update-function-code \
-            --function-name weather-app-ses-password-reset-email \
+            --function-name brad-weather-app-ses-password-reset-email \
             --zip-file fileb://deployment.zip
             
       - name: Verify deployment
         run: |
-          aws lambda wait function-updated --function-name weather-app-ses-password-reset-email 
-          FUNCTION_STATE=$(aws lambda get-function --function-name weather-app-ses-password-reset-email --query 'Configuration.State' --output text)
+          aws lambda wait function-updated --function-name brad-weather-app-ses-password-reset-email 
+          FUNCTION_STATE=$(aws lambda get-function --function-name brad-weather-app-ses-password-reset-email --query 'Configuration.State' --output text)
           if [ "$FUNCTION_STATE" != "Active" ]; then
             echo "Function not active after deployment"
             exit 1
