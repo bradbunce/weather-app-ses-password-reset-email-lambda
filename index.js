@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const ses = new AWS.SES({ region: process.env.AWS_REGION || 'us-east-1' });
+const ses = new AWS.SES({ region: process.env.REGION });
 
 exports.handler = async (event) => {
   // Log the incoming event for debugging
