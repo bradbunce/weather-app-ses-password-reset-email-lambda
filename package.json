@@ -1,0 +1,24 @@
+{
+    "name": "weather-app-ses-password-reset-email",
+    "version": "1.0.0",
+    "description": "AWS Lambda function for sending password reset emails via SES",
+    "main": "index.js",
+    "engines": {
+      "node": ">=20.0.0"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "aws-sdk": "^2.1058.0"
+    },
+    "keywords": [
+      "aws",
+      "lambda",
+      "ses",
+      "email",
+      "password-reset"
+    ],
+    "author": "Your Name",
+    "license": "ISC"
+  }
